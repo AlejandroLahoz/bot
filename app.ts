@@ -5,6 +5,8 @@ const token = "5507047985:AAGdjOL01o6RkKMc5ttBDCyV439WTqpIQnI";
 const listIdChatToSend = ["1244226867", "5586393005"];
 const bot = new TelegramBot(token, { polling: true });
 
+console.log("Online!");
+
 setInterval(() => {
   axios
     .get(
