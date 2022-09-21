@@ -7,7 +7,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 console.log("Online!");
 
-setInterval(() => {
+/* setInterval(() => {
   axios
     .get(
       "https://www.empleate.gob.es/empleate/open/offersearch/selectBuscador?q.op=AND&rows=100&sort=score%20desc&defType=edismax&df=titulo&facet=true&facet.field=paisF&facet.field=provinciaF&facet.field=provincia&facet.field=categoria&facet.field=categoriaF&facet.field=subcategoriaF&facet.field=subcategoria&facet.field=origen&facet.field=tipoContratoN&facet.field=noMeInteresa&facet.field=educacionF&facet.field=fechaCreacionPortal&facet.field=jornadaF&facet.field=experienciaF&facet.field=educacion&facet.field=minExperiencia&facet.field=jornada&facet.field=pais&facet.field=discapacidad&facet.field=cno&facet.mincount=1&f.topics.facet.limit=50&json.nl=map&fq=provincia%3A%2250%22&fq=(speStateId%3A1%20OR%20speStateId%3A4)%20AND%20checkVisible%3A1&fl=*%2C%20score&q=Programa%20investigo&wt=json"
@@ -54,3 +54,12 @@ bot.on("message", (msg) => {
     bot.sendMessage(chatId, "pong");
   }
 });
+ */
+
+axios
+  .get(
+    "https://server.autius.com/api/classes/classes-from-students?disponibility=Libres&teacherID=Todos&exitPointID=Todos&centerID=2"
+  )
+  .then((res) => {
+    console.log(res.data);
+  });
