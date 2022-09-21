@@ -30,7 +30,7 @@ setInterval(() => {
         }
       }
     });
-}, 10000);
+}, 60000);
 
 function sendNotifications(docs: any) {
   let message = "";
